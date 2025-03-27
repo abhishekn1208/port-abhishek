@@ -1,0 +1,129 @@
+#skills {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+   
+}
+#skills h1 {
+    font-size: 3rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative; /* Required for the ::after pseudo-element */
+    display: inline-block; /* Ensure the h1 takes only the width of its content */
+    padding-bottom: 10px; /* Space for the border */
+}
+
+/* Add the pseudo-element for the border effect */
+#skills h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Position it at the bottom of the h1 */
+    left: 50%; /* Start from the center */
+    width: 0; /* Start with no width */
+    height: 3px; /* Border height */
+    background-color: #333; /* Border color */
+    transition: width 0.4s ease, left 0.4s ease; /* Animating width and position */
+}
+
+/* Hover effect */
+#skills h1:hover::after {
+    width: 100%; /* Full width on hover */
+    left: 0; /* Move the border from the center to the left */
+}
+#skillset {
+    display: grid;
+    width: 100%;
+    text-align: center;
+    grid-template-columns: repeat(4, 1fr); /* Default to 4 columns */
+    gap: 20px; /* Space between grid items */
+    margin-top: 20px;
+}
+
+/* Individual skill container */
+#skill {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    left : 100px;
+    margin : 10px;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the logo in the skill box */
+}
+
+/* Image inside each skill */
+#skill img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Text inside each skill */
+#skill span {
+    margin-top : 10px;
+    position: absolute;
+    top: 100px; /* Adjusted to appear at the center */
+    left: 0;
+    right: 0;
+    opacity: 0;
+    font-size: 14px;
+    font-weight: bold;
+    transition: opacity 0.3s ease-in-out;
+    color: #333;
+}
+
+/* Hover effects */
+#skill:hover {
+    transform: scale(1.1);
+}
+
+#skill:hover img {
+    transform: scale(1.1);
+}
+
+#skill:hover span {
+    opacity: 1;
+    bottom: 10px;
+}
+
+/* Responsive Grid - Small devices (phones) */
+@media (max-width: 768px) {
+    #skillset {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on tablets and small devices */
+    }
+    #skills h1 {
+        font-size: 2.5rem; /* Smaller heading on mobile */
+    }
+    #skill{
+        left : 50px;
+    }
+}
+
+/* Responsive Grid - Extra small devices (phones) */
+@media (max-width: 480px) {
+    #skillset {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on very small screens */
+    }
+    #skills h1 {
+        font-size: 2rem; /* Smaller heading on very small screens */
+    }
+}
+
+/* Responsive Grid - Extra extra small devices (very narrow phones) */
+@media (max-width: 360px) {
+    #skillset {
+        grid-template-columns: 1fr; /* 1 column on the smallest screens */
+    }
+    #skills h1 {
+        font-size: 1.5rem; /* Even smaller heading */
+    }
+}

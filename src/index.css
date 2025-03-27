@@ -1,0 +1,6 @@
+@import 'tailwindcss/preflight';  /* Import preflight for base styles */
+@tailwind utilities;    
+html {
+    scroll-behavior: smooth;
+  }
+  

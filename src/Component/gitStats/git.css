@@ -1,0 +1,52 @@
+/* Container for the entire GitStats section */
+.git-stats-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  /* Header styling */
+  h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Full-width image */
+  .git-full img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Grid container for the two remaining images */
+  .git-grid {
+    display: inline-block;
+    width: 45%;
+    margin: 10px;
+  }
+  
+  /* Style the images within the grid */
+  .git-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect for images in the grid */
+  .git-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  h1 span{
+    color: #f39c12; 
+  }
+  

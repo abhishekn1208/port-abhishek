@@ -1,0 +1,113 @@
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.contact-info {
+  text-align: left;
+  max-width: 300px;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.contact-info a {
+  color: #4CAF50; /* Color for the email and phone links */
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-media a {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.social-media a:hover {
+  color: #4CAF50; /* Hover color */
+}
+
+.footer-bottom {
+  margin-top: 10px;
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  margin: 0;
+  position: relative; /* Needed for absolute positioning of the tooltip */
+}
+
+/* Heart text */
+.heart-text {
+  display: inline;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Heart text hidden when hovering */
+.heart-hide {
+  opacity: 0;
+}
+
+/* Tooltip hidden by default */
+.tooltip {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Tooltip visible when hovered */
+.show-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.heart {
+  color: #FF6347; /* Tomato color for the heart */
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .social-media {
+    margin-top: 10px;
+  }
+}

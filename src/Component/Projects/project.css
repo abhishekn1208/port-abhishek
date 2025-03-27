@@ -1,0 +1,106 @@
+.project {
+    text-align: center;
+    padding: 20px;
+}
+
+.project h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.project span {
+    color: #f39c12; 
+}
+
+#projectBox {
+    display: block;
+    gap: 30px; /* Added a definite gap between each project */
+    padding: 20px;
+}
+
+.project-grid {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.project-grid:hover {
+    transform: translateY(-10px); /* Slight lifting effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Darker shadow on hover for effect */
+    background-color: #3498db; /* Change background color on hover */
+}
+
+.project-grid:hover .desc-card h1,
+.project-grid:hover .desc-card p {
+    color: #fff; /* Change text color to white on hover */
+}
+
+.project-image {
+    width: 40%;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.desc-card {
+    padding: 15px;
+    width: 60%;
+    text-align: left;
+}
+
+.desc-card h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+    transition: color 0.3s ease-in-out; /* Smooth transition for text color */
+}
+
+.desc-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    transition: color 0.3s ease-in-out; /* Smooth transition for text color */
+}
+.tech-Stack{
+    display: flex;
+   
+}
+.tech-Stack #skill img{
+    width: 50px;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    mix-blend-mode:luminosity
+}
+
+@media (max-width: 768px) {
+    .project-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-image,
+    .desc-card {
+        width: 100%;
+    }
+
+    .desc-card h1 {
+        font-size: 1.5rem;
+    }
+
+    .desc-card p {
+        font-size: 0.95rem;
+    }
+    .tech-Stack{
+        display: flex;
+justify-content: center;
+align-items: center;
+    }
+}
