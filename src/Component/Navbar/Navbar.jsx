@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import './navbar.css';
+import resume from '../../assets/resume.pdf'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to toggle the menu visibility
 
-  const downloadResume = () => {
-    const link = document.createElement('a');
-    link.href = '/Abhisek_resume.pdf'; 
-    link.download = 'Abhishek_resume.pdf';  
-    link.click();  
-  };
+  // const downloadResume = () => {
+  //   const link = document.createElement('a');
+  //   link.href = '/abhisek_resume.pdf'; 
+  //   link.download = 'abhishek_resume.pdf';  
+  //   link.click();  
+  // };
 
   const toggleMenu = () => {
     setIsMenuOpen(prevState => !prevState);
@@ -27,7 +28,7 @@ const Navbar = () => {
           <li><a href="#stats">Statistics</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <button onClick={downloadResume}>Resume</button>
+        <button><a href={resume} download='resume'>Resume</a></button>
        
       </nav>
       <div className="hamburger" onClick={toggleMenu}>

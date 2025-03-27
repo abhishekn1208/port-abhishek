@@ -1,15 +1,16 @@
 import React from "react";
 import "./about.css";
 import image from '../../assets/D3ST.png'; 
+import resume from '../../assets/resume.pdf'
 
 
 const About = () => {
-  const downloadResume = () => {
-    const link = document.createElement('a');
-    link.href = '/Abhisek_resume.pdf'; 
-    link.download = 'Abhishek_resume.pdf';  
-    link.click();  
-  };
+  // const downloadResume = () => {
+  //   const link = document.createElement('a');
+  //   link.href = '/abhisek_resume.pdf'; 
+  //   link.download = 'abhishek_resume.pdf';  
+  //   link.click();  
+  // };
   return (
     <div id="About">
       <div className="About">
@@ -30,7 +31,9 @@ const About = () => {
           </p>
         </div>
       </div>
-      <button className="resumeBtn" onClick={downloadResume}>Resume</button>
+      <div style={{display:'flex',justifyContent:'center'}}>
+      <button><a href={resume} download='resume'>Resume</a></button>
+      </div>
     </div>
 
     </div>
