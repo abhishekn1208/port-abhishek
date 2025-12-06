@@ -1,113 +1,124 @@
 .footer {
-  background-color: #333;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-  position: relative;
+    background-color: #0e1625; /* Dark theme */
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
 }
 
 .footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 20px;
 }
 
-.contact-info {
-  text-align: left;
-  max-width: 300px;
+.contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #00eaff;
 }
 
 .contact-info p {
-  margin: 5px 0;
-  font-size: 1rem;
+    margin: 5px 0;
+    font-size: 1rem;
 }
 
 .contact-info a {
-  color: #4CAF50; /* Color for the email and phone links */
-  text-decoration: none;
+    color: #00eaff;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .contact-info a:hover {
-  text-decoration: underline;
+    color: #f39c12;
 }
 
 .social-media {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    align-items: center;
 }
 
 .social-media a {
-  color: white;
-  font-size: 1.5rem;
+    color: #00eaff;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
 }
 
 .social-media a:hover {
-  color: #4CAF50; /* Hover color */
+    color: #f39c12;
+    transform: translateY(-4px) scale(1.1);
 }
 
 .footer-bottom {
-  margin-top: 10px;
+    margin-top: 25px;
+    font-size: 0.9rem;
+    position: relative;
 }
 
 .footer-bottom p {
-  font-size: 0.9rem;
-  margin: 0;
-  position: relative; /* Needed for absolute positioning of the tooltip */
+    display: inline-block;
+    position: relative;
 }
 
 /* Heart text */
 .heart-text {
-  display: inline;
-  opacity: 1;
-  transition: opacity 0.3s ease;
+    display: inline;
+    opacity: 1;
+    transition: opacity 0.3s ease;
 }
 
 /* Heart text hidden when hovering */
 .heart-hide {
-  opacity: 0;
+    opacity: 0;
 }
 
 /* Tooltip hidden by default */
 .tooltip {
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: black;
-  color: white;
-  text-align: center;
-  padding: 5px;
-  border-radius: 3px;
-  font-size: 0.8rem;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-/* Tooltip visible when hovered */
-.show-tooltip {
-  opacity: 1;
-  visibility: visible;
-}
-
-.heart {
-  color: #FF6347; /* Tomato color for the heart */
-}
-
-@media (max-width: 600px) {
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact-info {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #00eaff;
+    color: #0e1625;
     text-align: center;
-    margin-bottom: 20px;
-  }
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    z-index: 10;
+}
 
-  .social-media {
-    margin-top: 10px;
-  }
+/* Tooltip visible on hover */
+.show-tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: -40px;
+}
+
+/* Heart emoji color */
+.heart {
+    color: #f39c12;
+    margin-left: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
 }

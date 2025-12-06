@@ -1,0 +1,97 @@
+.experience {
+  padding: 80px 20px;
+  background: #0a0f1f;
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 50px;
+}
+
+.title span {
+  color: #00eaff;
+}
+
+.experience-container {
+  max-width: 950px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.experience-card {
+  background: #0e1b2b;
+  border: 1px solid #182c3d;
+  padding: 25px 30px;
+  border-radius: 12px;
+  transition: 0.35s;
+  position: relative;
+}
+
+.experience-card:hover {
+  border-color: #00eaff;
+  box-shadow: 0 0 18px rgba(0, 238, 255, 0.25);
+  transform: translateY(-5px);
+}
+
+.role {
+  color: #ffffff;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.experience-meta {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: #9fd3ff;
+  margin-bottom: 15px;
+}
+
+.icon {
+  margin-right: 6px;
+  color: #00eaff;
+  font-size: 14px;
+}
+
+.exp-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.exp-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #d2eaff;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.bullet-icon {
+  font-size: 14px;
+  color: #00eaff;
+  margin-top: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .experience-card {
+    padding: 20px;
+  }
+
+  .experience-meta {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

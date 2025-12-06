@@ -1,43 +1,38 @@
 import React from "react";
 import "./about.css";
-import image from '../../assets/D3ST.png'; 
-import resume from '../../assets/resume.pdf'
-
+import image from "../../assets/abhishek.jpeg";
+import resume from "../../assets/resume.pdf";
 
 const About = () => {
-  // const downloadResume = () => {
-  //   const link = document.createElement('a');
-  //   link.href = '/abhisek_resume.pdf'; 
-  //   link.download = 'abhishek_resume.pdf';  
-  //   link.click();  
-  // };
   return (
-    <div id="About">
-      <div className="About">
-      <h1>
+    <section id="About" className="about-section">
+      <h1 className="heading">
         About <span>Me</span>
       </h1>
-      <div className="aboutDesc">
-        <div className="profileImg">
-          <img src={image} alt="profile photo"/>
-        </div>
-        <div className="paragraph">
-          <p>
-            Driven and adaptable Full Stack Web Developer with expertise in the
-            MERN stack, including MongoDB, Express.js, React, and Node.js.
-            Skilled in designing scalable web applications and implementing
-            RESTful APIs. Capable of using Generative AI and quickly learning
-            new technologies to enhance development workflows.
-          </p>
-        </div>
-      </div>
-      <div style={{display:'flex',justifyContent:'center'}}>
-      <button><a href={resume} download='resume'>Resume</a></button>
-      </div>
-    </div>
 
-    </div>
-      );
+      <div className="aboutContent">
+        <div className="aboutImg">
+          <img src={image} alt="Profile" />
+        </div>
+
+        <div className="aboutText">
+          <p>
+            Full Stack Developer with 1 year of intensive MERN stack training
+            at Masai School and 7+ months of professional experience
+            building scalable and efficient web applications.
+            Hands-on experience with React, TypeScript, MongoDB,
+            REST APIs, performance optimization, and secure authentication systems.
+            Passionate about problem-solving, UI/UX enhancements,
+            and learning Gen-AI tools to build impactful solutions.
+          </p>
+
+          <a href={resume} download="Abhishek-Nigam-Resume.pdf" className="resumeBtn">
+            Download Resume
+          </a>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default About;

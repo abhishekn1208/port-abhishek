@@ -1,41 +1,40 @@
-import React, { useState } from 'react';
-import './navbar.css';
-import resume from '../../assets/resume.pdf'
+import React, { useState } from "react";
+import "./navbar.css";
+import resume from "../../assets/resume.pdf";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to toggle the menu visibility
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // const downloadResume = () => {
-  //   const link = document.createElement('a');
-  //   link.href = '/abhisek_resume.pdf'; 
-  //   link.download = 'abhishek_resume.pdf';  
-  //   link.click();  
-  // };
-
-  const toggleMenu = () => {
-    setIsMenuOpen(prevState => !prevState);
-  };
+  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
   return (
     <header>
       <nav>
-        <span>Abhishek</span>
-        <ul className={isMenuOpen ? 'active' : ''}>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#About">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#stats">Statistics</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <span className="logo">Abhishek</span>
+
+        <ul className={isMenuOpen ? "nav-links active" : "nav-links"}>
+          <li><a href="#home" onClick={() => setIsMenuOpen(false)}>Home</a></li>
+          <li><a href="#About" onClick={() => setIsMenuOpen(false)}>About</a></li>
+          <li><a href="#experience" onClick={() => setIsMenuOpen(false)}>Experience</a></li>
+          <li><a href="#skills" onClick={() => setIsMenuOpen(false)}>Skills</a></li>
+          <li><a href="#projects" onClick={() => setIsMenuOpen(false)}>Projects</a></li>
+          {/* <li><a href="#stats" onClick={() => setIsMenuOpen(false)}>Statistics</a></li> */}
+          <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
+          <li className="mobile-resume">
+            <a href={resume} download="Abhishek_Resume.pdf">Resume</a>
+          </li>
         </ul>
-        <button><a href={resume} download='resume'>Resume</a></button>
-       
-      </nav>
-      <div className="hamburger" onClick={toggleMenu}>
+
+        <a href={resume} download="Abhishek_Resume.pdf" className="desktop-resume">
+          Resume
+        </a>
+
+        <div className={`hamburger ${isMenuOpen ? "toggle" : ""}`} onClick={toggleMenu}>
           <div className="line"></div>
           <div className="line"></div>
           <div className="line"></div>
         </div>
+      </nav>
     </header>
   );
 };

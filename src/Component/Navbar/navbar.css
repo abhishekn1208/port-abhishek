@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,62 +7,62 @@
 }
 
 header {
-  background-color: #333;
+  background-color: #222;
   color: #fff;
-  padding: 20px 0;
   position: sticky;
   top: 0;
   z-index: 999;
   width: 100%;
+  transition: all 0.3s ease;
 }
 
 nav {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 15px 20px;
 }
 
-nav span {
+.logo {
   font-size: 1.8rem;
-  font-weight: bold;
+  font-weight: 700;
   letter-spacing: 2px;
+  cursor: pointer;
+  color: #00eaff; 
 }
 
-ul {
+.nav-links {
   list-style: none;
   display: flex;
+  gap: 20px;
 }
 
-ul li {
-  margin-right: 20px;
-}
-
-ul li a {
+.nav-links li a {
   color: #fff;
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s;
-  cursor: pointer;
 }
 
-ul li a:hover {
-  color: #f1c40f; 
+.nav-links li a:hover {
+  color: #00eaff; /* Updated hover color */
 }
 
-button {
+/* Resume button */
+.desktop-resume {
   padding: 10px 20px;
-  background-color: #f1c40f;
-  color: #333;
-  border: none;
+  background-color: #00eaff; /* Use as primary button color */
+  color: #222;
   border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
   transition: background-color 0.3s;
 }
 
-button:hover {
-  background-color: #e67e22; /* Orange color on hover */
+.desktop-resume:hover {
+   background-color: #00bcd4; 
 }
 
 /* Hamburger Menu */
@@ -69,58 +70,77 @@ button:hover {
   display: none;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
-  width: 30px;
+  width: 25px;
   height: 25px;
   cursor: pointer;
 }
 
 .hamburger .line {
-  width: 25px;
+  width: 100%;
   height: 3px;
   background-color: #fff;
   border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
-/* Mobile responsiveness */
+/* Hamburger animation */
+.hamburger.toggle .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.toggle .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.toggle .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
-  header{
-    display: flex;
-    
-    
-  }
   nav {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    left: 0;
     width: 100%;
-  }
-
-  ul {
-    margin-top: 10px;
+    background-color: #222;
     flex-direction: column;
-    width: 100%;
-    display: none; /* Hide the menu initially */
-  }
-
-  ul.active {
-    display: flex; 
-  }
-
-  ul li {
-    margin: 10px 0;
-    text-align: center;
-  }
-
-  button {
+    align-items: center;
+    gap: 15px;
     display: none;
-    margin-top: 10px;
-    width: 100%;
-    text-align: center; /* Center the button on mobile */
+    padding: 20px 0;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .desktop-resume {
+    display: none;
+  }
+
+  .mobile-resume a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #f1c40f;
+    color: #222;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+
+  .mobile-resume a:hover {
+    background-color: #e67e22;
   }
 
   .hamburger {
-    display: flex; /* Show the hamburger icon on mobile */
-    margin-right: 20px;
-    margin-top: 6px;
+    display: flex;
   }
 }

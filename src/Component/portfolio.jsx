@@ -4,9 +4,11 @@ import Home from './Home/Home'
 import About from './About/About'
 import Skills from './Skills/Skills'
 import Projects from './Projects/Projects'
-import GitStats from './gitStats/gitStats'
+// import GitStats from './gitStats/gitStats'
+import GitStats from './gitStats/GitStats.jsx'
 import ContactMe from './Contact/ContactMe'
-import Footer from './Footer/Footer'
+import Footer from './Footer/Footer.jsx'
+import Experience from './Experience/Experience.jsx'
 
 const Portfolio = () => {
   return (
@@ -14,9 +16,10 @@ const Portfolio = () => {
 <Navbar/>
 <Home/>
 <About/>
+<Experience/>
 <Skills/>
 <Projects/>
-<GitStats/>
+{/* <GitStats/> */}
 <ContactMe/>
 <Footer/>
 </>
